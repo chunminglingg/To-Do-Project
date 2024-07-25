@@ -3,12 +3,12 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="grid">
-      <nav>
+    <div className="grid h-screen w-screen bg-gradient-to-bl from-white to-indigo-300 ">
+      <nav className="">
         <NavBar />
       </nav>
       <main>
-        <div className="w-[80%] m-auto pt-16 flex flex-col justify-center items-center gap-4">
+        <div className="w-[80%] m-auto pt-25 flex flex-col justify-center items-center gap-4">
           <p className="font-medium text-xl text-center">
             Build the habits that{" "}
             <span className="text-indigo-600">Matter!</span>
