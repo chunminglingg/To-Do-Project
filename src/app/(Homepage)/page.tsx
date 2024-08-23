@@ -1,3 +1,4 @@
+import { Button } from "@/components";
 import { NavBar } from "@/components/nav-bar";
 import React from "react";
 
@@ -17,7 +18,7 @@ const page = () => {
             Feeling overwhelmed? Our easy-to-use Habits tracker help you to
             control of your day and achieve your goals.
           </p>
-          <button className="px-4 py-2.5 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-400 focus:ring-2 focus:ring-indigo-700 shadow-md shadow-indigo-200">Let&apos;s get started!</button>
+          <Button colorScheme="Primary" size="lg">Let&apos;s get started!</Button>
         </div>
       </main>
     </div>
