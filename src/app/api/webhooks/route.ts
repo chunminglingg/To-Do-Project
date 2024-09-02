@@ -67,7 +67,7 @@ export async function POST(req: Request) {
     try {
       await connectionToDb(); // Ensure the DB connection is established
       await User.create(newUser);
-      console.log("User created successfully");
+      console.log("User created successfully!!");
     } catch (err) {
       console.error("Error creating user in the database:", err);
       return new Response("Error occurred while creating user", {
