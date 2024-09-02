@@ -1,15 +1,18 @@
 import mongoose from "mongoose";
-import Error from "next/error";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 async function connectionToDb() {
-
     try {
-        await mongoose.connect(process.env.MONGODB_URI as string);
-        console.log("Db connected .......");
-        
+        // Log the connection string to verify it's loaded correctly
+        console.log("Attempting to connect to MongoDB with URL:", process.env.MONGO_URL);
+
+        await mongoose.connect(process.env.MONGO_URL as string);
+
+        console.log("Database connected successfully!");
     } catch (err) {
-        console.log("connection of db seem error:" , err);
-        
+        console.log("Connection error:", err);
     }
 }
 
