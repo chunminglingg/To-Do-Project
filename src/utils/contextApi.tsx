@@ -2,6 +2,11 @@
 
 import { GlobalContextTypes } from "@/types/GlobalContextType";
 import { menuItemType } from "@/types/MenuItemType";
+import {
+  faChartSimple,
+  faLayerGroup,
+  faRectangleList,
+} from "@fortawesome/free-solid-svg-icons";
 import { ReactNode, createContext, useState, useContext } from "react";
 
 const GlobalContext = createContext<GlobalContextTypes>({
@@ -11,11 +16,11 @@ const GlobalContext = createContext<GlobalContextTypes>({
   },
 });
 
-function GlobalContextProvide({ children }: { children: ReactNode }) {
+function GlobalContextProvider({ children }: { children: ReactNode }) {
   const [menuItems, setMenuItems] = useState<menuItemType[]>([
-    { name: "All Habits", isSelected: true },
-    { name: "Statistics", isSelected: false },
-    { name: "Areas", isSelected: false },
+    { name: "All Habits", isSelected: true, icon: faRectangleList },
+    { name: "Statistics", isSelected: false, icon: faChartSimple },
+    { name: "Areas", isSelected: false, icon: faLayerGroup },
   ]);
 
   return (
@@ -31,4 +36,4 @@ export function useGlobalContextProvider() {
   return useContext(GlobalContext);
 }
 
-export default GlobalContextProvide;
+export default GlobalContextProvider;
