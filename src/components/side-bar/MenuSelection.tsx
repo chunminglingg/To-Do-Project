@@ -2,7 +2,6 @@ import { menuItemType } from "@/types/MenuItemType";
 import { useGlobalContextProvider } from "@/utils/contextApi";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import LogoutSection from "../button/LogoutSection";
 
 const MenuSelection = () => {
   const { menuItemsObject } = useGlobalContextProvider();
@@ -14,7 +13,7 @@ const MenuSelection = () => {
           <SignleMenuItem menuItemsProps={menuItems}/>
         </div>
       ))}
-      <LogoutSection/>
+
     </div>
   );
 };

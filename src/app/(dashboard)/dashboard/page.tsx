@@ -39,9 +39,9 @@ const Dashbaord = () => {
   }
   return (
     <>
-      <div className='grid grid-cols-4 h-screen'>
-        <div className='col-span-1'><SideBar/></div>
-        <div className='col-span-3 mt-5'>{selectComponent}</div>
+      <div className='flex bg-slate-50'>
+        <SideBar/>
+       {selectComponent}
       </div>
     </>
   )
